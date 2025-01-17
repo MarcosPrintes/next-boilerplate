@@ -1,0 +1,27 @@
+name: ci
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/checkout@v3
+        with:
+          node-version: v18.x
+          cache: "npm"
+
+      - name: Install denpendencies
+        run: npm install
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Testing
+        run: npm run test
+
+      - name: Build
+        run: npm run build
