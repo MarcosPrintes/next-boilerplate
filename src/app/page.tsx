@@ -1,9 +1,9 @@
+import Main from "@/components/Main";
+
 export default function Home() {
   return (
     <div>
-      <main>
-        <h1>React avançado</h1>
-      </main>
+      <Main />
     </div>
   );
 }
